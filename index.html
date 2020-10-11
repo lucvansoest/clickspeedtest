@@ -28,11 +28,20 @@
 
         <h2>Clicks in 5 Seconds</h2>
 
-        <p>How fast can you click in 5 seconds? Start the game by clicking on the gray box. Note: Clock starts ticking with the first click.</p>
+        <p>How fast can you click in 5 seconds? Start the game by clicking on the orange box. Note: Clock starts ticking with the first click.</p>
 
-        <div id="timer">timer: 0.000</div>
+        <div class="timer-container">
+            <img src="img/pbjt.gif" class="counting" width="70">
+            <span id="timer">timer: 0.000</span>
+            <img src="img/pbjt.gif" class="counting" width="70">
+        </div>
 
-        <div id="click-pad">start clicking</div>
+        <div id="click-pad">
+            <span id="click-pad-text">start clicking</span>
+            <button id="restart">RESTART</button>
+        </div>
+
+        <div id="result"></div>
 
     </main>
 

@@ -4,6 +4,10 @@ body {
     font-size:62.5%; 
     color: #323E40;outline: none;
     font-family: 'VT323', monospace;
+    width: 100%;
+    height: 100%;;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%);
 }
 
 h1 {
@@ -16,11 +20,7 @@ h1 {
 
 h2 {
     font-size: 4.4em;
-    font-family: 'VT323', monospace;
-    color: #F2AB27;
-    background: -webkit-linear-gradient(#F2AB27, #D97D0D);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #D94D1A;
     margin: 1rem 0 0.5rem 0;
 }
 
@@ -29,7 +29,7 @@ p {
 }
 
 main {
-    width: 60rem;
+    max-width: 60rem;
     text-align: center;
     position: absolute;
     left: 50%;
@@ -38,13 +38,18 @@ main {
     transform: translate(-50%, -50%);
 }
 
+.timer-container {
+    text-align: center;
+}
+
 #timer {
     font-size: 5rem;
 }
 
 #click-pad {
+    clear: both;
     margin-top: 1rem;
-    width: 60rem;
+    width: 100%;
     height: 20rem;
     background-color: #D94D1A;
     -webkit-border-radius: 10px;
@@ -64,8 +69,38 @@ main {
     -khtml-user-select: none; /* webkit (konqueror) browsers */
     -ms-user-select: none; /* IE10+ */
     transition: 0.5s ease;
+    position: relative;
 }
 
 #click-pad:hover {
     background-color: #D97D0D;
+}
+
+#click-pad button {
+    font-family: 'VT323', monospace;
+    background-color: #F2AB27;
+    width: 20rem;
+    height:  5rem;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    bottom: -5%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#result {
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: #D94D1A;
+}
+
+.counting {
+    visibility: hidden;
 }
